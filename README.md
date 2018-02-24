@@ -2,4 +2,5 @@
 
 Custom ItemDecoration for RecyclerView
 
-![gif-01](img/1.gif)
+<img width="150" height="200" src="img/1.gif"/>
+
