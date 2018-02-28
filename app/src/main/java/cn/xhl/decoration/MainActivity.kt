@@ -7,6 +7,7 @@ import android.support.v4.app.ActivityCompat
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.view.View
+import cn.xhl.decoration.activity.ImageStickyActivity
 import cn.xhl.decoration.activity.NormalActivity
 import cn.xhl.decoration.activity.StickyActivity
 import cn.xhl.decoration.adapter.MainAdapter
@@ -17,7 +18,8 @@ import java.util.*
 class MainActivity : AppCompatActivity() {
     private val mRecyclerData = ArrayList<MainEntity>()
     private val mRecyclerAdapter = MainAdapter(mRecyclerData)
-    private val activities = Arrays.asList(NormalActivity::class.java, StickyActivity::class.java)
+    private val activities = Arrays.asList(NormalActivity::class.java,
+            StickyActivity::class.java, ImageStickyActivity::class.java)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,6 +30,7 @@ class MainActivity : AppCompatActivity() {
 
         mRecyclerData.add(MainEntity().apply { text = "normal" })
         mRecyclerData.add(MainEntity().apply { text = "sticky" })
+        mRecyclerData.add(MainEntity().apply { text = "image" })
         mRecyclerAdapter.notifyDataSetChanged()
         mRecyclerAdapter.onItemClickListener = BaseQuickAdapter
                 .OnItemClickListener { _: BaseQuickAdapter<*, *>?, _: View?, position: Int ->

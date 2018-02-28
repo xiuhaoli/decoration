@@ -1,14 +1,15 @@
-package cn.xhl.decoration.decoration.sticky
+package cn.xhl.decoration.decoration.image
 
 /**
  * <pre>
  *     author : xiuhaoli
  *     e-mail : xiuhaoli@outlook.com
- *     time   : 2018/02/24
+ *     time   : 2018/02/27
  *     version: 1.0
  * </pre>
  */
-interface IStickyEntity {
+interface IImageStickyEntity {
     fun getStickyText(): String
 
+    fun getImage(): Int
 }

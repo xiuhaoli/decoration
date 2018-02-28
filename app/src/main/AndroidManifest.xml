@@ -17,7 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".activity.StickyActivity" />
-        <activity android:name=".activity.NormalActivity"></activity>
+        <activity android:name=".activity.NormalActivity"/>
+        <activity android:name=".activity.ImageStickyActivity"/>
     </application>
 
 </manifest>

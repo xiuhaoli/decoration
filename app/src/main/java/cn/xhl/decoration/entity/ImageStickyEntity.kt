@@ -1,5 +1,6 @@
 package cn.xhl.decoration.entity
 
+import cn.xhl.decoration.decoration.image.IImageStickyEntity
 import cn.xhl.decoration.decoration.sticky.IStickyEntity
 
 /**
@@ -10,9 +11,14 @@ import cn.xhl.decoration.decoration.sticky.IStickyEntity
  *     version: 1.0
  * </pre>
  */
-class StickyEntity : IStickyEntity {
-    var tag: String = ""
+class ImageStickyEntity : IImageStickyEntity {
     var city: String = ""
+    var tag: String = ""
+    var img: Int = 0
+
+    override fun getImage(): Int {
+        return img
+    }
 
     override fun getStickyText(): String {
         return tag
